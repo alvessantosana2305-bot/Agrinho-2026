@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meio Ambiente</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #fff5f9;
+    color: #333;
+}
+
+header{
+    background: #ff8fba;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+section{
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.card{
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+h2{
+    color: #ff5c9a;
+    margin-bottom: 10px;
+}
+
+button{
+    background: #ff5c9a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+}
+
+button:hover{
+    background: #ff3f86;
+}
+
+#contador{
+    font-size: 28px;
+    color: #ff5c9a;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#floresta{
+    margin-top: 30px;
+    font-size: 40px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+footer{
+    background: #ff8fba;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🌱 Preservação do Meio Ambiente</h1>
+    <p>Pequenas ações ajudam a construir um futuro melhor.</p>
+</header>
+
+<section>
+
+    <div class="card">
+        <h2>Por que preservar?</h2>
+        <p>
+            A preservação ambiental garante recursos naturais,
+            protege os ecossistemas e melhora a qualidade de vida.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Plante uma árvore virtual</h2>
+        <p>Clique no botão para ajudar nossa floresta crescer.</p>
+
+        <button onclick="plantarArvore()">
+            Plantar Árvore
+        </button>
+
+        <div id="contador">Árvores plantadas: 0</div>
+
+        <div id="floresta"></div>
+    </div>
+
+</section>
+
+<footer>
+    Projeto sobre Meio Ambiente 🌍
+</footer>
+
+<script>
+let total = 0;
+
+function plantarArvore() {
+    total++;
+
+    document.getElementById("contador").innerText =
+        "Árvores plantadas: " + total;
+
+    document.getElementById("floresta").innerHTML += "🌳 ";
+}
+</script>
+
+</body>
+</html>
